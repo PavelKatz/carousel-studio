@@ -1,0 +1,63 @@
+{
+  "meta": { "slug": "smoke-test", "lang": "ru" },
+  "slides": [
+    {
+      "template": "cover",
+      "slots": {
+        "eyebrow": "§ I · CMOLL TALK",
+        "title": "AI-маркетинг\nбез воды",
+        "subtitle": "Девять слайдов о том, как собрать систему, а не зоопарк инструментов",
+        "watermark": "MMXXVI"
+      },
+      "highlights": ["без воды"],
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "body",
+      "slots": {
+        "kicker": "§ II · Проблема",
+        "title": "Почему 90% AI-внедрений умирают за месяц",
+        "body": [
+          "Компании покупают подписки на десять нейросетей и ждут чуда. Чуда не происходит.",
+          "Инструмент без процесса — это просто счёт на оплату. Работает связка, а не отдельная игрушка."
+        ]
+      },
+      "highlights": ["связка"],
+      "background": { "mode": "gradient", "gradient": { "angle": "165deg", "stops": ["#140194", "#0a0050"] } }
+    },
+    {
+      "template": "list",
+      "slots": {
+        "kicker": "§ III · Каркас",
+        "title": "Четыре опоры AI-системы",
+        "ordered": true,
+        "items": [
+          "Данные о клиенте в одном месте",
+          "Голос бренда, зашитый в промпты",
+          "Маршрутизация задач к нужному агенту",
+          "Проверка качества перед публикацией"
+        ]
+      },
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "quote",
+      "slots": {
+        "quote": "Маркетинг будущего — это не человек с нейросетью. Это система, в которой человек ставит цель.",
+        "attribution": "— Павел Кац"
+      },
+      "background": { "mode": "solid", "color": "ink" }
+    },
+    {
+      "template": "cta",
+      "slots": {
+        "kicker": "§ IX · Дальше",
+        "title": "С чего начнёте?",
+        "question": "Напишите в комментариях, какой процесс отдадите AI первым",
+        "handle": "@cmolltalk"
+      },
+      "highlights": ["AI"],
+      "background": { "mode": "solid", "color": "bg" }
+    }
+  ]
+}

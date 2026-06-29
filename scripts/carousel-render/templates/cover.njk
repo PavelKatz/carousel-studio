@@ -1,0 +1,9 @@
+{% extends "_base.njk" %}
+{% block justify %}flex-end{% endblock %}
+{% block content %}
+  <div class="stack" style="gap: 34px;">
+    {% if slots.eyebrow %}<div class="eyebrow">{{ slots.eyebrow | safe }}</div>{% endif %}
+    <h1 class="title">{{ slots.title | safe }}</h1>
+    {% if slots.subtitle %}<div class="subtitle" style="margin-top: 6px;">{{ slots.subtitle | safe }}</div>{% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "_base.njk" %}
+{% block justify %}center{% endblock %}
+{% block content %}
+  <div class="stack">
+    {% if slots.kicker %}<div class="kicker">{{ slots.kicker | safe }}</div>{% endif %}
+    <div class="cta">{{ slots.title | safe }}</div>
+    {% if slots.question %}<div class="subtitle">{{ slots.question | safe }}</div>{% endif %}
+    {% if slots.handle %}<div class="eyebrow" style="margin-top: 16px;">{{ slots.handle | safe }}</div>{% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{
+  "meta": { "slug": "sample", "lang": "ru", "note": "Нейтральный пример слайдов для проверки референса. Все фоны solid bg → корректно рендерится на любом референсе." },
+  "slides": [
+    {
+      "template": "cover",
+      "slots": {
+        "eyebrow": "§ I · ПРИМЕР",
+        "title": "Так выглядит твой стиль",
+        "subtitle": "Пять слайдов на твоих токенах: цвета, шрифты, плашки.",
+        "watermark": "Aa"
+      },
+      "highlights": ["твой стиль"],
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "body",
+      "slots": {
+        "kicker": "§ II · ТЕКСТ",
+        "title": "Заголовок и абзацы",
+        "body": [
+          "Это body-слайд: заголовок плюс один-два абзаца. Шрифт и кегль — из токенов.",
+          "Ключевое слово можно подсветить — вот так: акцентная плашка."
+        ]
+      },
+      "highlights": ["плашка"],
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "list",
+      "slots": {
+        "kicker": "§ III · СПИСОК",
+        "title": "Список из пунктов",
+        "ordered": true,
+        "items": [
+          "Первый пункт — одна строка",
+          "Второй пункт",
+          "Третий пункт",
+          "Четвёртый пункт"
+        ]
+      },
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "quote",
+      "slots": {
+        "quote": "Цитата крупным курсивом — для панча или мысли.",
+        "attribution": "— Автор"
+      },
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "cta",
+      "slots": {
+        "kicker": "§ IV · ФИНАЛ",
+        "title": "Работает?",
+        "question": "Если шрифты и цвета попали — референс готов.",
+        "handle": "@acme"
+      },
+      "highlights": ["Работает"],
+      "background": { "mode": "solid", "color": "bg" }
+    }
+  ]
+}

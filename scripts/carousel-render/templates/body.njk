@@ -1,0 +1,13 @@
+{% extends "_base.njk" %}
+{% block justify %}center{% endblock %}
+{% block content %}
+  <div class="stack">
+    {% if slots.kicker %}<div class="kicker">{{ slots.kicker | safe }}</div>{% endif %}
+    {% if slots.title %}<div class="title" style="font-size: calc(var(--t-title-size) * 0.62); line-height: 1.04;">{{ slots.title | safe }}</div>{% endif %}
+    {% if slots.body %}
+      <div class="stack">
+        {% for p in slots.body %}<p class="body">{{ p | safe }}</p>{% endfor %}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

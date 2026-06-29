@@ -1,0 +1,19 @@
+{
+  "name": "carousel-studio",
+  "displayName": "Carousel Studio",
+  "version": "0.1.0",
+  "description": "Turn any idea, post, or link into an on-brand Instagram carousel. Decompose your visual references into design tokens, then render text-perfect 1080×1350 slides via HTML/CSS → headless Chromium. Includes a setup wizard.",
+  "author": {
+    "name": "Digital Bandito",
+    "url": "https://t.me/cmolltalk"
+  },
+  "keywords": [
+    "instagram",
+    "carousel",
+    "brand",
+    "design-tokens",
+    "content",
+    "social-media",
+    "playwright"
+  ]
+}

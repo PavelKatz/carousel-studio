@@ -1,0 +1,12 @@
+{% extends "_base.njk" %}
+{% block justify %}center{% endblock %}
+{% block style %}
+  .quotemark { font-family: var(--ff-display); font-size: 132px; line-height: 1; color: var(--c-accent); margin-bottom: 14px; }
+{% endblock %}
+{% block content %}
+  <div class="stack">
+    <div class="quotemark">&laquo;</div>
+    <div class="quote">{{ slots.quote | safe }}</div>
+    {% if slots.attribution %}<div class="kicker">{{ slots.attribution | safe }}</div>{% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "_base.njk" %}
+{% block justify %}center{% endblock %}
+{% block style %}
+  .list { display: flex; flex-direction: column; gap: 30px; margin-top: 8px; }
+  .list__row { display: flex; gap: 24px; align-items: baseline; }
+  .list__num { font-family: var(--ff-mono); font-size: calc(var(--t-listItem-size) * 0.8); font-weight: 600; color: var(--c-accent); min-width: 1.6em; }
+  .list__bullet { color: var(--c-accent); font-size: var(--t-listItem-size); line-height: 1; }
+{% endblock %}
+{% block content %}
+  <div class="stack">
+    {% if slots.kicker %}<div class="kicker">{{ slots.kicker | safe }}</div>{% endif %}
+    {% if slots.title %}<div class="title" style="font-size: calc(var(--t-title-size) * 0.6); line-height: 1.04;">{{ slots.title | safe }}</div>{% endif %}
+    <div class="list">
+      {% for item in slots.items %}
+        <div class="list__row">
+          {% if slots.ordered %}<div class="list__num">{{ loop.index }}</div>{% else %}<div class="list__bullet">&bull;</div>{% endif %}
+          <div class="listitem">{{ item | safe }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

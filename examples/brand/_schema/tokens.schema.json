@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://personal-hub/knowledge/brand/_schema/tokens.schema.json",
+  "title": "Carousel brand tokens",
+  "description": "Decomposed brand reference for the carousel-render engine. DTCG-flavored: leaves may be a literal or a {$value,...} object.",
+  "type": "object",
+  "required": ["canvas", "color", "typography"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "lang": { "type": "string" },
+        "source_images": { "type": "array", "items": { "type": "string" } },
+        "extracted_at": { "type": "string" },
+        "extracted_by": { "type": "string" },
+        "confidence": { "enum": ["high", "medium", "low"] }
+      }
+    },
+    "canvas": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "$ref": "#/$defs/dim" },
+        "height": { "$ref": "#/$defs/dim" },
+        "safeArea": {
+          "type": "object",
+          "properties": {
+            "top": { "$ref": "#/$defs/dim" },
+            "right": { "$ref": "#/$defs/dim" },
+            "bottom": { "$ref": "#/$defs/dim" },
+            "left": { "$ref": "#/$defs/dim" }
+          }
+        }
+      }
+    },
+    "color": {
+      "type": "object",
+      "description": "Named color roles. Values are hex/rgb/hsl strings or {$value}.",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/leaf" }
+    },
+    "typography": {
+      "type": "object",
+      "required": ["fontFamilies", "roles"],
+      "properties": {
+        "fontFamilies": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "object",
+                "required": ["$value"],
+                "properties": {
+                  "$value": { "type": "string" },
+                  "fallback": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              }
+            ]
+          }
+        },
+        "roles": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "$ref": "#/$defs/role" }
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "properties": {
+        "radius": { "$ref": "#/$defs/dim" },
+        "grid": { "type": "object" },
+        "plaque": {
+          "type": "object",
+          "properties": {
+            "bg": { "$ref": "#/$defs/leaf" },
+            "color": { "$ref": "#/$defs/leaf" },
+            "padX": { "$ref": "#/$defs/dim" },
+            "padY": { "$ref": "#/$defs/dim" }
+          }
+        },
+        "logo": {
+          "type": "object",
+          "properties": {
+            "asset": { "$ref": "#/$defs/leaf" },
+            "placement": { "enum": ["top-left", "top-right", "bottom-left", "bottom-right"] },
+            "width": { "$ref": "#/$defs/dim" },
+            "showOn": { "type": "array", "items": { "enum": ["cover", "body", "quote", "list", "cta"] } }
+          }
+        }
+      }
+    },
+    "imagery": {
+      "type": "object",
+      "properties": {
+        "style": { "type": "string" },
+        "promptStyle": { "type": "string" },
+        "treatment": { "type": "object" }
+      }
+    },
+    "motifs": {
+      "type": "array",
+      "items": { "type": "object", "properties": { "id": { "type": "string" } } }
+    }
+  },
+  "$defs": {
+    "dim": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "object", "required": ["$value"], "properties": { "$value": {} } }
+      ]
+    },
+    "leaf": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "object", "required": ["$value"], "properties": { "$value": {} } }
+      ]
+    },
+    "role": {
+      "type": "object",
+      "properties": {
+        "family": { "type": "string" },
+        "size": { "$ref": "#/$defs/dim" },
+        "weight": { "type": ["number", "string"] },
+        "lineHeight": { "type": ["number", "string"] },
+        "tracking": { "type": "string" },
+        "case": { "enum": ["none", "uppercase", "lowercase", "capitalize"] },
+        "italic": { "type": "boolean" },
+        "color": { "type": "string" }
+      }
+    }
+  }
+}

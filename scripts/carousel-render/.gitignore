@@ -1,0 +1,4 @@
+node_modules/
+.cache/
+*.log
+# fonts/*.woff2 are committed on purpose (self-contained, SIL OFL) — do NOT ignore them

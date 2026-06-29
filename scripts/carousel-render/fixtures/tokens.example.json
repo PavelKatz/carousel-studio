@@ -1,0 +1,41 @@
+{
+  "meta": { "id": "example-roman", "lang": "ru", "note": "Self-contained smoke-test tokens. No external assets." },
+  "canvas": {
+    "width": "1080px",
+    "height": "1350px",
+    "safeArea": { "top": "96px", "right": "84px", "bottom": "120px", "left": "84px" }
+  },
+  "color": {
+    "bg": "#140194",
+    "bgAlt": "#f2f4f6",
+    "ink": "#0a0050",
+    "fg": "#ffffff",
+    "accent": "#f7ff28",
+    "accent2": "#DC3790",
+    "positive": "#b3c805",
+    "muted": "#f6f3ea"
+  },
+  "typography": {
+    "fontFamilies": {
+      "display": { "$value": "Playfair Display", "fallback": "Georgia, serif" },
+      "serif": { "$value": "Lora", "fallback": "Georgia, serif" },
+      "grotesk": { "$value": "Inter", "fallback": "system-ui, sans-serif" },
+      "mono": { "$value": "IBM Plex Mono", "fallback": "ui-monospace, monospace" }
+    },
+    "roles": {
+      "eyebrow":  { "family": "mono", "size": "28px", "weight": 500, "lineHeight": "1.3", "tracking": "0.18em", "case": "uppercase", "color": "accent" },
+      "kicker":   { "family": "mono", "size": "26px", "weight": 500, "tracking": "0.16em", "case": "uppercase", "color": "accent2" },
+      "title":    { "family": "display", "size": "112px", "weight": 700, "lineHeight": "1.1", "color": "fg" },
+      "subtitle": { "family": "serif", "size": "46px", "weight": 500, "lineHeight": "1.2", "italic": true, "color": "fg" },
+      "body":     { "family": "serif", "size": "42px", "weight": 400, "lineHeight": "1.34", "color": "fg" },
+      "quote":    { "family": "serif", "size": "64px", "weight": 500, "lineHeight": "1.18", "italic": true, "color": "fg" },
+      "listItem": { "family": "grotesk", "size": "40px", "weight": 400, "lineHeight": "1.28", "color": "fg" },
+      "cta":      { "family": "display", "size": "82px", "weight": 700, "lineHeight": "1.02", "color": "accent" },
+      "pageNum":  { "family": "mono", "size": "24px", "weight": 500, "color": "fg" }
+    }
+  },
+  "layout": {
+    "radius": "0px",
+    "plaque": { "bg": "accent", "color": "ink", "padX": "14px", "padY": "2px" }
+  }
+}

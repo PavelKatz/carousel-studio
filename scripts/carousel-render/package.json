@@ -1,0 +1,24 @@
+{
+  "name": "carousel-render",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deterministic design-token → HTML/CSS → PNG carousel slide renderer (Playwright). Engine for the carousel-creator agent. Model-agnostic: consumes background image paths, never calls an image API.",
+  "type": "module",
+  "bin": {
+    "carousel-render": "src/cli.mjs"
+  },
+  "scripts": {
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "browser": "playwright install chromium",
+    "setup": "npm install && npm run browser && npm run fonts",
+    "smoke": "node src/cli.mjs --slides fixtures/slides.example.json --tokens fixtures/tokens.example.json --out .cache/smoke --debug-html .cache/smoke/html"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.4",
+    "playwright": "^1.49.0",
+    "zod": "^3.24.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

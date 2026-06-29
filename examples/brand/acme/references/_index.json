@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "owner": "acme",
+  "default": "clean-editorial",
+  "categories": ["course-launch", "thought-leadership", "case-study", "event-promo", "personal-story"],
+  "references": [
+    {
+      "id": "clean-editorial",
+      "title": "Clean Editorial (пример)",
+      "category": "thought-leadership",
+      "mood": ["clean", "modern", "calm", "expert"],
+      "use_when": "Нейтральный пример-стиль. Замени на свой через extract-brand-tokens или скопируй и поправь цвета/шрифты.",
+      "channels": ["instagram", "linkedin"],
+      "tokens": "clean-editorial/tokens.json"
+    }
+  ]
+}

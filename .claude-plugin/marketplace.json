@@ -1,0 +1,14 @@
+{
+  "name": "digital-bandito",
+  "owner": {
+    "name": "Digital Bandito"
+  },
+  "description": "Плагины Digital Bandito для студентов.",
+  "plugins": [
+    {
+      "name": "carousel-studio",
+      "source": "./",
+      "description": "Превращает любую идею, пост или ссылку в on-brand Instagram-карусель — разбирает референсы на дизайн-токены и рендерит текст-идеальные слайды 1080×1350. Со стартовым визардом."
+    }
+  ]
+}
