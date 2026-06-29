@@ -16,10 +16,10 @@
 ## Установка
 **Через marketplace (для студентов):**
 ```
-/plugin marketplace add <github-user>/carousel-studio
+/plugin marketplace add https://github.com/PavelKatz/carousel-studio
 /plugin install carousel-studio@digital-bandito
 ```
-`<github-user>/carousel-studio` — адрес репозитория на GitHub (подставь свой после публикации). Локально: `/plugin marketplace add ./carousel-studio`.
+(короче: `/plugin marketplace add PavelKatz/carousel-studio`). Локально из клона: `/plugin marketplace add ./carousel-studio`.
 
 Движок рендера подготовится сам на шаге 5 визарда. Вручную (разово):
 ```
