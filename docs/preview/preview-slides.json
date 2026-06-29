@@ -1,0 +1,64 @@
+{
+  "meta": { "slug": "preview", "lang": "ru", "note": "Контент для README-превью. Рендерится на примере-референсе clean-editorial." },
+  "slides": [
+    {
+      "template": "cover",
+      "slots": {
+        "eyebrow": "§ CAROUSEL STUDIO",
+        "title": "Карусели, которые на бренде",
+        "subtitle": "Из идеи, поста или ссылки — за пару минут, в твоём стиле.",
+        "watermark": "Aa"
+      },
+      "highlights": ["на бренде"],
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "body",
+      "slots": {
+        "kicker": "§ КАК ЭТО РАБОТАЕТ",
+        "title": "Референс → дизайн-токены",
+        "body": [
+          "Даёшь картинку-образец. Система вытаскивает шрифты, цвета и сетку.",
+          "Дальше каждый слайд собирается по ним — текст всегда идеальный."
+        ]
+      },
+      "highlights": ["идеальный"],
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "list",
+      "slots": {
+        "kicker": "§ ПЯТЬ ТИПОВ СЛАЙДОВ",
+        "title": "Из чего собирается",
+        "ordered": true,
+        "items": [
+          "Обложка-хук",
+          "Текст и абзацы",
+          "Цитата-панч",
+          "Список и шаги",
+          "Финал с призывом"
+        ]
+      },
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "quote",
+      "slots": {
+        "quote": "Текст рисует не нейросеть, а вёрстка. Поэтому буквы не кривые.",
+        "attribution": "— Carousel Studio"
+      },
+      "background": { "mode": "solid", "color": "bg" }
+    },
+    {
+      "template": "cta",
+      "slots": {
+        "kicker": "§ СТАРТ",
+        "title": "Поехали?",
+        "question": "Дай ссылку этого репо своему Claude Code — он подскажет шаги.",
+        "handle": "@digital_bandito"
+      },
+      "highlights": ["Поехали"],
+      "background": { "mode": "solid", "color": "bg" }
+    }
+  ]
+}

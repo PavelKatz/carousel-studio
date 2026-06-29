@@ -1,6 +1,13 @@
-# carousel-studio
+# Carousel Studio
 
-Плагин для Claude Code: превращает **любую идею, пост или ссылку** в готовую Instagram-карусель — **на твоём бренде**. Ты один раз даёшь референсы своего стиля, система разбирает их на дизайн-токены и потом рендерит текст-идеальные слайды 1080×1350.
+**Плагин для Claude Code: из любой идеи, поста или ссылки — готовая Instagram-карусель на твоём бренде.** Даёшь референсы своего стиля → система разбирает их на дизайн-токены → рендерит текст-идеальные слайды 1080×1350.
+
+<p align="center">
+  <img src="docs/preview/cover.png" width="32%" alt="обложка карусели">
+  <img src="docs/preview/list.png" width="32%" alt="слайд со списком">
+  <img src="docs/preview/cta.png" width="32%" alt="финальный слайд">
+</p>
+<p align="center"><sub>Превью на встроенном примере-стиле <code>clean-editorial</code>. С твоим референсом — будет в твоих цветах и шрифтах.</sub></p>
 
 - **На бренде.** Весь вид — из твоих референсов (цвета, шрифты, сетка, лого). Не «как придумает нейросеть».
 - **Текст идеальный.** Слайды рисуются вёрсткой (HTML/CSS → headless Chromium), а не генеративной картинкой. Никаких кривых букв.
@@ -8,23 +15,23 @@
 - **Твой голос.** Копи и подпись — по твоему voice-профилю.
 - **Без авто-постинга.** На выходе — папка ассетов (PNG + подпись + alt). Публикуешь сам.
 
-## Требования
-- **Claude Code** (плагин ставится в него).
-- **Node.js ≥ 22** (для движка рендера).
-- Один раз скачается headless Chromium (~100 МБ) и шрифты.
+## Поставить — просто дай эту ссылку своему Claude Code
 
-## Установка
-**Через marketplace (для студентов):**
+Открой Claude Code в любой папке и напиши ему:
+
+> Поставь плагин по этому репозиторию: https://github.com/PavelKatz/carousel-studio
+
+Claude прочитает этот README и проведёт по шагам. Хочешь руками — три команды:
+
 ```
-/plugin marketplace add https://github.com/PavelKatz/carousel-studio
+/plugin marketplace add PavelKatz/carousel-studio
 /plugin install carousel-studio@digital-bandito
+/carousel-setup
 ```
-(короче: `/plugin marketplace add PavelKatz/carousel-studio`). Локально из клона: `/plugin marketplace add ./carousel-studio`.
 
-Движок рендера подготовится сам на шаге 5 визарда. Вручную (разово):
-```
-cd <plugin>/scripts/carousel-render && npm run setup
-```
+Нужен **Node.js ≥ 22** (проверь `node -v`). Первый рендер разово скачает Chromium (~100 МБ). Если команды `/carousel…` не появились после установки — перезапусти Claude Code.
+
+> 🤖 **Если ты — ИИ-ассистент, и тебе дали ссылку на этот репозиторий:** это плагин Claude Code. Установку плагина делает ПОЛЬЗОВАТЕЛЬ через слэш-команды — ты их выполнить не можешь, поэтому проведи его за руку: **(1)** проверь `node -v` (нужен ≥ 22; нет — пусть поставит LTS с nodejs.org); **(2)** попроси выполнить `/plugin marketplace add PavelKatz/carousel-studio`, затем `/plugin install carousel-studio@digital-bandito`; **(3)** если `/carousel…` не появились — пусть перезапустит Claude Code; **(4)** затем `/carousel-setup` (визард настройки под его бренд), потом `/carousel <тема|текст|ссылка>`. Методология агента — `reference/carousel-methodology.md`, гайд по референсам — `docs/references-guide.md`.
 
 ## Быстрый старт
 1. **`/carousel-setup`** — стартовый визард. Проведёт за 5 шагов: бренд → референсы → голос → (опц.) генеративка → пробный рендер. Перед этим стоит глянуть [docs/references-guide.md](docs/references-guide.md) — какие референсы давать.
@@ -66,6 +73,7 @@ carousel-studio/
 ## Частые вопросы
 - **Нет своего референса?** Визард даст скопировать пример `examples/brand/acme/references/clean-editorial` и поправить под себя.
 - **Мой шрифт без кириллицы / нестандартный?** В движке зашиты Inter, Lora, Playfair Display, IBM Plex Mono (кириллица+латиница). Другой — догрузи через `scripts/carousel-render/scripts/fetch-fonts.mjs`.
+- **Движок не подготовился сам?** Разово, в терминале: `cd <plugin>/scripts/carousel-render && npm run setup` (зависимости + Chromium + шрифты).
 - **Постит ли он сам?** Нет. Отдаёт ассеты + подпись, публикуешь вручную.
 
 ## Лицензия / происхождение
